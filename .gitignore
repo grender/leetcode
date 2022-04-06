@@ -1,0 +1,16 @@
+.bsp/
+.bloop/
+.metals/
+.vscode/
+target/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.cache
+.lib/
+/project/project
+/project/metals.sbt
