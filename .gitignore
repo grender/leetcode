@@ -14,3 +14,4 @@ project/plugins/project/
 .lib/
 /project/project
 /project/metals.sbt
+.DS_Store
