@@ -6,7 +6,7 @@ Given an integer array arr, and an integer target, return the number of tuples i
 As the answer can be very large, return it modulo 109 + 7.
  */
 
-package t923_3Sum_With_Multiplicity {
+package t0923_3Sum_With_Multiplicity {
 
   object Solution {
 

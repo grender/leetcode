@@ -6,7 +6,7 @@ package t0004_median_of_two_arrays {
   Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
 The overall run time complexity should be O(log (m+n)).
-  */
+   */
   object Solution {
 
     def findMedianSortedArrays(nums1: Array[Int], nums2: Array[Int]): Double = {
@@ -31,29 +31,22 @@ The overall run time complexity should be O(log (m+n)).
           val canGo1 = idx1 < nums1.size
           val canGo2 = idx2 < nums2.size
 
-          if (!canGo1 && !canGo2) {
-            return (0, 0)
-          } else {
-
-            if (canGo1 && canGo2) {
-              val v1 = nums1(idx1)
-              val v2 = nums2(idx2)
-              if (v1 > v2) {
-                rec(idx1, idx2 + 1, prevVal, v2)
-              } else {
-                rec(idx1 + 1, idx2, prevVal, v1)
-              }
+          if (canGo1 && canGo2) {
+            val v1 = nums1(idx1)
+            val v2 = nums2(idx2)
+            if (v1 > v2) {
+              rec(idx1, idx2 + 1, prevVal, v2)
             } else {
-              if (!canGo1) {
-                rec(idx1, idx2 + 1, prevVal, nums2(idx2))
-              } else if (!canGo2) {
-                rec(idx1 + 1, idx2, prevVal, nums1(idx1))
-              } else {
-                return (0, 0)
-              }
+              rec(idx1 + 1, idx2, prevVal, v1)
             }
-
+          } else if (!canGo1) {
+            rec(idx1, idx2 + 1, prevVal, nums2(idx2))
+          } else if (!canGo2) {
+            rec(idx1 + 1, idx2, prevVal, nums1(idx1))
+          } else {
+            return (0, 0)
           }
+
         }
       }
 
