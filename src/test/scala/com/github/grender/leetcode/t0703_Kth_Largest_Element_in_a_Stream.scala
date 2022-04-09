@@ -2,8 +2,6 @@ import munit.FunSuite
 
 package t0703_Kth_Largest_Element_in_a_Stream {
 
-import scala.collection.mutable.PriorityQueue
-
   /*
 Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
