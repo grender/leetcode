@@ -171,6 +171,7 @@ package t0923_3Sum_With_Multiplicity {
 
     cases.foreach { case ((arg1, arg2), result) =>
       test(s"checking $arg1 , $arg2 = $result") {
+
         assertEquals(Solution.threeSumMulti(arg1.toArray, arg2), result)
       }
     }
